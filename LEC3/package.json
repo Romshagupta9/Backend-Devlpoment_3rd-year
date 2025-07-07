@@ -1,0 +1,16 @@
+{
+  "name": "romsha",
+  "version": "1.0.0",
+  "description": "i am romsha",
+  "license": "ISC",
+  "author": "@romsha_gupta/LEC3",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "romsha": "^1.0.0"
+  }
+}
