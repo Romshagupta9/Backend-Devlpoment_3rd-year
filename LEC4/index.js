@@ -64,7 +64,6 @@
 
 //solving using promises
 
-
 let product = [{
     name:"samsung",
     amount:70000,
@@ -87,5 +86,39 @@ function buyproduct(product_name){
     });
 }
 
+let balance=200000;
+function deductMoney(amount){
+return new Promise((resolve, reject)=>{
+    if(amount>balance){
+        reject("insufficient balance");
+    }else{
+        balance-=amount;
+        resolve("Product purchased");
+    }
+})
+}
+buyProduct("Iphone").then((amount) => deductMoney(amount))
+.then((data)=>{
+    console.log(data);
+})
+.catch((err)=>{
+    console.log(err);
+})
 
-//deduct bankamount promise --- hw
+
+// buyProduct("Iphone")
+// .then((data) => {
+//     console.log("Product amount is: " + data);
+//     return deductMoney(data))
+// }
+
+// .then((data)=>{
+//     console.log(data);
+// })
+// .catch((err)=>{
+//     console.log(err);
+// })
+
+
+
+
