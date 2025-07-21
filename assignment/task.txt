@@ -1,0 +1,4 @@
+Write data in file using fs module,
+input data should be taken using terminal
+process.argv is like args in java terminal ka input process.argv  k andar hota heh terminal meh array k form meh output deta heh
+part2 todo ka title description input lena heh --todo application
