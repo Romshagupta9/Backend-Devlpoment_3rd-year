@@ -15,7 +15,7 @@ app.post("/submit",(req,res)=>{
     console.log(name1);
     console.log(age);
     res.send("user added")
-
+    
 })
 app.listen(3000,()=>{
     console.log("Server Started")
