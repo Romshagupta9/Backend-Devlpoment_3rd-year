@@ -20,3 +20,4 @@ fs.readFile('./todo.txt','utf-8',(err1,data)=>{
         console.log("Task Added");
     })
 })
+

@@ -1,8 +1,6 @@
 let userContainer = document.querySelector(".userContainer");
 console.log(userContainer);
 
-
-
 function getUserData(URL){
     fetch(URL)
     .then((res)=>{
@@ -13,6 +11,7 @@ function getUserData(URL){
     //      console.log(data); 
     // })
 
+    
     .then((data)=>{
         console.log(data);
         data.forEach(user=>{
