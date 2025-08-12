@@ -12,6 +12,7 @@ const app = express()
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const Blogs= require('./model/user');
+const User=require('./model/user');
 app.post("/blogs", async(req, res) => {
     let { title, body} = req.body;
     let newBlog = new Blogs({
@@ -42,16 +43,47 @@ app.get("/blogs/:id",async(req,res)=>{
         success: true,
         data: blog,
     })
-
+    
 })
 
+//user vla routes started
+app.post("/users",async(req,res)=>{
+    let {email, username, password} = req.body;
+    let newUser= new User({
+        email:email,
+        username:username,
+        password:password
+    })
+    await newUser.save();
+    res.json({
+        success:true,
+        body: newUser,
+        message:"new user added successfully"
+    })
+})
+
+app.get("/blogs", async(req, res) => {
+    let AllBlogs = await Blogs.find();
+    res.json({
+        success: true,
+        data: AllBlogs,
+    })
+})
+app.get("/blogs/:id",async(req,res)=>{
+    let {id}=req.params
+    let blog = await Blogs.findOne({_id:id});
+    res.json({
+        success: true,
+        data: blog,
+    })
+    
+})
 
 
 
 app.listen(4445, () => {
   console.log("Server is running on port 4445");
 });
-
 
 mongoose.connect('mongodb://127.0.0.1:27017/g26DB')
   .then(() => console.log('Connected to MongoDB!'))
@@ -60,5 +92,5 @@ mongoose.connect('mongodb://127.0.0.1:27017/g26DB')
 //create a user schema in user.js file
 //email,username,pwd
 ////blog vla route k niche  3 route bnane hia...app.post("/users") , app.get("/users") , app.get("/users/:id")
-//username,email,password
+
 
