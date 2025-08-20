@@ -1,0 +1,25 @@
+{
+  "name": "bed_3rd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Romshagupta9/Backend-Devlpoment_3rd-year.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Romshagupta9/Backend-Devlpoment_3rd-year/issues"
+  },
+  "homepage": "https://github.com/Romshagupta9/Backend-Devlpoment_3rd-year#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.17.2"
+  }
+}
