@@ -1,0 +1,27 @@
+persistent--connection bane rhna(single TCP connection)
+full duplex--two way communication
+
+real time communication
+server driven -- serve ko koi response bhejn aho bar bar
+
+polling
+
+websocket -> communication protocol -> http (bidirectional data communication)
+
+browser -> http
+browser <- http (then server break)
+
+connection is persistent (means connection will not break and without client req server can send response), full-duplex communication (two way channel between client and server), over 1 tcp connection
+
+server cannot send any response until and unless req is sent
+
+example: stock exchange:-  http send req and socket send message
+(real time communication)
+
+server driven thing is done by websocket
+
+polling if u dont want to use websocket, like after some intervals if we want to send 
+the req (we cannot do 30 lakh req work by polling) leetcode use polling bcz one user onluy 
+send 3-4 req but in stock exchange price change in milli sec and we have to send soo maky req in 1 min for 1 user so it cant be dont by polling
+
+
