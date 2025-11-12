@@ -1,16 +1,20 @@
 class principal{
-    instance = null;
-    principal=null;
+    multipleSchool=new Map();
+    _principal=null;
+    // instance = null;
+    // principal=null;
     _constructor(name){//private bnadiya _ is 
         this.principal=name;
     }
 
-   static getPrincipal(){
-    if(!instance){
+   static getPrincipal(school){
+    if(!multipleSchool.has(school)){
         let principal=new principal();
-        instance=principal;
+        multipleSchool.set(school,principal);
+       // instance=principal;
     }
-    return instance;
+    //return instance;
+    return multipleSchool.get(school);
     } 
     createCurriculum(){
 
