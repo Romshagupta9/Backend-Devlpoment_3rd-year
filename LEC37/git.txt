@@ -1,0 +1,49 @@
+version control system
+version - jitni baar update kara to har baar new version bnega
+
+if ther eis no vcs then we will either write 5 lines of code again and again like fits five lines then comment that so that that doesnt get delets the we comment and write it another form like we need to make copis but the problem is storage 
+
+types of vcs
+1 centralise 
+    problems:
+            1 if code gets deleted by mistake there is no way to get it back
+            2 regular internet connection
+2 decentralise
+    only need internect while push and pull thats it
+
+
+commands:
+repository -- a directory/folder or a storage kind of thing for vcs
+git init for repo initialisation 
+
+
+* how to make git repository *
+git init.  ( nwe'll get this Initialized empty Git repository in /Users/PARMEET KAUR/parmeet_Git/.git/)
+ls 
+ls -a    (to see hidden files)
+
+
+* how to create a version *
+ folder -> index.js
+           package.json
+           node modules
+
+staging area -> protected layer between code and version we can add and deleted the files in staging area to make version
+a file whose version is not formed then it is untracked file (U means untracked and A means tracked file) and the command is {git add filename}
+but always check status of the project {git status} and if we change the file and then add then it will show M whcih mean modify and it will not change in staging area until and unless we do git add but if we made the version with doing git add after modify then it will make version of older code
+
+write git commit to make the verison and also write commit message (git commit -m "this done")
+if we enter git commit then vim editor got open and we will write and then espc :wq and to write press i and if we want to quit without writing anything the simple espc and :q
+
+git add . ( . means current directory mean jitna code hmara currect directory mein hai vo sara staging area mein add kr do)
+git add -a (mean git add all)
+
+
+* how to check history (all versions)*
+git log 
+git checkout <commit id>
+git branch (to check branch name)
+git checkout main 
+
+
+* branching *
